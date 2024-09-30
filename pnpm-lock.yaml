@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@fontsource/noto-sans-kr':
+    specifier: ^5.1.0
+    version: 5.1.0
   next:
     specifier: 14.2.13
     version: 14.2.13(@babel/core@7.25.2)(react-dom@18.3.1)(react@18.3.1)
@@ -1714,6 +1717,10 @@ packages:
     resolution: {integrity: sha512-d9zaMRSTIKDLhctzH12MtXvJKSSUhaHcjV+2Z+GK+EEY7XKpP5yR4x+N3TAcHTcu963nIr+TMcCb4DBCYX1z6Q==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
+
+  /@fontsource/noto-sans-kr@5.1.0:
+    resolution: {integrity: sha512-Q0wGdwQm8GQ5D2OeEqssgWOv16FJwEmoTnwwOPeshvVgxGT83Uxak7jEXNbRqmMCLJNoPOdzYXadwYL+hvfx7A==}
+    dev: false
 
   /@humanwhocodes/config-array@0.13.0:
     resolution: {integrity: sha512-DZLEEqFWQFiyK6h5YIeynKx7JlvCYWL0cImfSRXZ9l4Sg2efkFGTuFf6vzXjK1cq6IYkU+Eg/JizXw+TD2vRNw==}
