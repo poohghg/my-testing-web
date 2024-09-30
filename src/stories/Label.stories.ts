@@ -1,12 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { fn } from '@storybook/test';
-import { Button } from '@/shared/ui/Button/Button';
+import Label from '@/shared/ui/Label/index';
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
   // 스토리북상 에서 보여지는 경로
-  title: 'Example/Button',
+  title: 'Example/Label',
   // 실제 컴포넌트
-  component: Button,
+  component: Label,
   parameters: {
     layout: 'centered',
   },
@@ -15,39 +14,21 @@ const meta = {
   argTypes: {
     // 컴포넌트 Props 인터페이스 내 주석
     // description 또는 defaultValue 를 사용하여 문서화
-    backgroundColor: { control: 'color', description: '색상' },
+    htmlFor: { control: 'color', description: 'label의 for 속성' },
   },
   // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
-  args: { onClick: fn() },
-} satisfies Meta<typeof Button>;
+} satisfies Meta<typeof Label>;
 
 export default meta;
+
 type Story = StoryObj<typeof meta>;
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const Primary: Story = {
+export const Default: Story = {
   args: {
-    primary: true,
-    label: 'Button',
+    htmlFor: 'label',
+    children: 'Label',
   },
 };
 
-export const Secondary: Story = {
-  args: {
-    label: 'Button',
-  },
-};
 
-export const Large: Story = {
-  args: {
-    size: 'large',
-    label: 'Button',
-  },
-};
-
-export const Small: Story = {
-  args: {
-    size: 'small',
-    label: 'Button',
-  },
-};
